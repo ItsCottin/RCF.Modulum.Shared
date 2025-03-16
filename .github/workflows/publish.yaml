@@ -24,7 +24,7 @@ jobs:
         run: |
           VERSION=$(curl -H "Authorization: Bearer ${{ secrets.token }}" \
                         -H "Accept: application/vnd.github.v3+json" \
-                        https://api.github.com/repos/ItsCottin/RCF.Modulum.Domain/environments/deploy/variables/RCF_MODULUM_DOMAIN_VERSION \
+                        https://api.github.com/repos/ItsCottin/RCF.Modulum.Shared/environments/deploy/variables/RCF_MODULUM_SHARED_VERSION \
                         | jq -r '.value')
 
           # Se a versão ainda não estiver definida, define como 0.0.1-beta.1
@@ -68,8 +68,8 @@ jobs:
             -H "Authorization: Bearer ${{ secrets.token }}" \
             -H "Accept: application/vnd.github.v3+json" \
             -H "Content-Type: application/json" \
-            -d "{\"name\":\"RCF_MODULUM_DOMAIN_VERSION\", \"value\":\"$NEW_VERSION\"}" \
-            https://api.github.com/repos/ItsCottin/RCF.Modulum.Domain/environments/deploy/variables/RCF_MODULUM_DOMAIN_VERSION
+            -d "{\"name\":\"RCF_MODULUM_SHARED_VERSION\", \"value\":\"$NEW_VERSION\"}" \
+            https://api.github.com/repos/ItsCottin/RCF.Modulum.Shared/environments/deploy/variables/RCF_MODULUM_SHARED_VERSION
 
       - name: Restore Dependencies
         run: dotnet restore
