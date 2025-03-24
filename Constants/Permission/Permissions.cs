@@ -19,6 +19,28 @@ namespace modulum.Shared.Constants.Permission
             public const string Search = "Permissions.Users.Search";
         }
 
+        [DisplayName("Roles")]
+        [Description("Roles Permissions")]
+        public static class Roles
+        {
+            public const string View = "Permissions.Roles.View";
+            public const string Create = "Permissions.Roles.Create";
+            public const string Edit = "Permissions.Roles.Edit";
+            public const string Delete = "Permissions.Roles.Delete";
+            public const string Search = "Permissions.Roles.Search";
+        }
+
+        [DisplayName("Role Claims")]
+        [Description("Role Claims Permissions")]
+        public static class RoleClaims
+        {
+            public const string View = "Permissions.RoleClaims.View";
+            public const string Create = "Permissions.RoleClaims.Create";
+            public const string Edit = "Permissions.RoleClaims.Edit";
+            public const string Delete = "Permissions.RoleClaims.Delete";
+            public const string Search = "Permissions.RoleClaims.Search";
+        }
+
         /// <summary>
         /// Returns a list of Permissions.
         /// </summary>

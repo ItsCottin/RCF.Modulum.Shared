@@ -45,5 +45,11 @@
         {
             public const string OpenXml = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet";
         }
+
+        public static class Variable
+        {
+            public const string ModulumSecretJWT = "MODULUM_SECRET_JWT";
+            public const string ModulumConnectionString = "MODULUM_CONNECTION_STRING";
+        }
     }
 }
