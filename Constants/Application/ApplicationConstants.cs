@@ -51,6 +51,8 @@
             public const string ModulumSecretJWT = "MODULUM_SECRET_JWT";
             public const string ModulumConnectionString = "MODULUM_CONNECTION_STRING";
             public const string UrlAPI = "URL_API";
+            public const string UrlClient = "URL_CLIENT";
+            public const string SendGridMailAPIKey = "SEND_GRID_MAIL_API_KEY";
         }
     }
 }
