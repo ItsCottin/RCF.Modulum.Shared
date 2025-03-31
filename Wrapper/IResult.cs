@@ -8,7 +8,7 @@ namespace modulum.Shared.Wrapper
 
         bool Succeeded { get; set; }
 
-        Dictionary<string, object> Fields { get; set; }
+        Dictionary<string, string> Fields { get; set; }
     }
 
     public interface IResult<out T> : IResult
