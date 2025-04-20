@@ -9,6 +9,8 @@
             public static string AuthToken = "authToken";
             public static string RefreshToken = "refreshToken";
             public static string UserImageURL = "userImageURL";
+            public static string EmailCadastro = "EmailCadastro";
+            public static string CodeTwoFactor = "CodeTwoFactor";
         }
 
         public static class Server
