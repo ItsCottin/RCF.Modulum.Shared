@@ -40,5 +40,7 @@ namespace modulum.Shared.Routes
     public static class EndpointGetVersao
     {
         public const string Raiz = "versao/"; // Raiz do Controller
+
+        public const string Update = "update";
     }
 }
