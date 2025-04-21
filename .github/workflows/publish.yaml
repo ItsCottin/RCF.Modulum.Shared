@@ -85,10 +85,18 @@ jobs:
       - name: Get JWT Token from API
         id: get_token
         run: |
-          RESPONSE=$(curl -s -X POST \
-            -H "Content-Type: application/json" \
-            -d "{\"email\":\"${{ secrets.REGISTER_USER }}\",\"password\":\"${{ secrets.REGISTER_PASSWORD }}\"}" \
-            "${{ secrets.URL_API_LOGIN }}")
+          EMAIL="${{ secrets.REGISTER_USER }}"
+          PASSWORD="${{ secrets.REGISTER_PASSWORD }}"
+
+          echo "🛠️ Tentando logar com $EMAIL"
+
+          echo "$EMAIL"
+          echo "$PASSWORD"
+
+          RESPONSE=$(curl -s -w "\nHTTP_CODE:%{http_code}" -X POST \
+          -H "Content-Type: application/json" \
+          -d "{\"email\": \"$EMAIL\", \"password\": \"$PASSWORD\"}" \
+          "${{ secrets.URL_API_LOGIN }}")
 
           echo "token=$RESPONSE" >> $GITHUB_ENV
           echo "{\"email\":\"${{ secrets.REGISTER_USER }}\",\"password\":\"${{ secrets.REGISTER_PASSWORD }}\"}"
