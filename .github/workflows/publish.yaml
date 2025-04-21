@@ -91,6 +91,8 @@ jobs:
             "${{ secrets.URL_API_LOGIN }}")
 
           echo "token=$RESPONSE" >> $GITHUB_ENV
+          echo "{\"email\":\"${{ secrets.REGISTER_USER }}\",\"password\":\"${{ secrets.REGISTER_PASSWORD }}\"}"
+          echo "$RESPONSE"
 
       - name: Send NuGet Info to API
         run: |
