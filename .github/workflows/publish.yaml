@@ -87,12 +87,10 @@ jobs:
         run: |
           RESPONSE=$(curl -s -X POST \
             -H "Content-Type: application/json" \
-            -d "{\"email\":\"sistema@sistema.com\",\"password\":\"@Aa123456\"}" \
+            -d "{\"email\":\"${{ secrets.REGISTER_USER }}\",\"password\":\"${{ secrets.REGISTER_PASSWORD }}\"}" \
             "${{ secrets.URL_API_LOGIN }}")
 
           echo "token=$RESPONSE" >> $GITHUB_ENV
-          echo "{\"email\":\"${{ secrets.REGISTER_USER }}\",\"password\":\"${{ secrets.REGISTER_PASSWORD }}\"}"
-          echo "$RESPONSE"
 
       - name: Send NuGet Info to API
         run: |
