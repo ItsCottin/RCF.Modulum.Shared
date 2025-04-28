@@ -35,6 +35,7 @@ namespace modulum.Shared.Routes
         public const string Raiz = "dynamic/"; // Raiz do Controller
 
         public const string Operacao = "{operacao}";
+        public const string Menu = "get-menu";
     }
 
     public static class EndpointGetVersao
