@@ -36,6 +36,8 @@ namespace modulum.Shared.Routes
 
         public const string Operacao = "{operacao}";
         public const string Menu = "get-menu";
+        public const string GetNewObjeto = "get-objeto";
+        public const string GetMapTable = "get-map-table";
     }
 
     public static class EndpointGetVersao

@@ -21,6 +21,6 @@ namespace modulum.Shared.Enum
         DATE,
 
         [Display(Name = "'Sim' ou 'Não'")]
-        BOOLEAN
+        BIT
     }
 }
