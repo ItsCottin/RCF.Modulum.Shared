@@ -25,26 +25,6 @@
             public const string PingResponse = "PingResponseAsync";
 
         }
-        public static class Cache
-        {
-            public const string GetAllBrandsCacheKey = "all-brands";
-            public const string GetAllDocumentTypesCacheKey = "all-document-types";
-
-            public static string GetAllEntityExtendedAttributesCacheKey(string entityFullName)
-            {
-                return $"all-{entityFullName}-extended-attributes";
-            }
-
-            public static string GetAllEntityExtendedAttributesByEntityIdCacheKey<TEntityId>(string entityFullName, TEntityId entityId)
-            {
-                return $"all-{entityFullName}-extended-attributes-{entityId}";
-            }
-        }
-
-        public static class MimeTypes
-        {
-            public const string OpenXml = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet";
-        }
 
         public static class Variable
         {
@@ -53,6 +33,7 @@
             public const string UrlAPI = "URL_API";
             public const string UrlClient = "URL_CLIENT";
             public const string SendGridMailAPIKey = "SEND_GRID_MAIL_API_KEY";
+            public const string BlobDataSeeder = "MODULUM_BLOB_DATASEEDER";
         }
     }
 }

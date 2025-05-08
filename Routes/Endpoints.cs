@@ -38,6 +38,13 @@ namespace modulum.Shared.Routes
         public const string Menu = "get-menu";
         public const string GetNewObjeto = "get-objeto";
         public const string GetMapTable = "get-map-table";
+        public const string SelectDynamicById = "get-for-id";
+        public const string DeleteDynamicById = "del-for-id";
+        public const string AlterMapTable = "alter-map-table";
+        public const string DeleteMapTable = "del-map-table";
+        public const string RenameNomeTabelaTela = "rename-table-tela";
+        public const string AlterRelacionamento= "alter-relacionamento";
+        public const string ConsultarRelacionamento = "consultar-relacionamento";
     }
 
     public static class EndpointGetVersao
