@@ -18,6 +18,9 @@ namespace modulum.Shared.Enum
         ManyToOne,
 
         [Display(Name = "Muitos pra Muitos")]
-        ManyToMany
+        ManyToMany,
+
+        [Display(Name = "Um pra Um")]
+        OneToOne
     }
 }

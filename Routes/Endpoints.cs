@@ -19,6 +19,7 @@ namespace modulum.Shared.Routes
         public const string ChangePassword = "change-password";
         public const string IsEmailConfirmed = "is-confirm-email";
         public const string Info = "info";
+        public const string CadastroExterno = "cadastro-externo";
     }
 
     public static class EndpointsToken
