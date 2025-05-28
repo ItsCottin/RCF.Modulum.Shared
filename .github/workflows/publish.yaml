@@ -81,6 +81,7 @@ jobs:
       - name: Run dotnet list package and save to file
         run: |
           dotnet list package --format json > nuget-packages.json
+          dotnet list package --format json
 
       - name: Get JWT Token from API
         id: get_token
@@ -96,7 +97,7 @@ jobs:
         run: |
           curl -s -X POST \
             -H "Authorization: Bearer ${{ env.token }}" \
-            -H "versao: ${{ env.new_version }}" \"
+            -H "versao: ${{ env.new_version }}" \
             -H "Content-Type: application/json" \
             --data-binary @nuget-packages.json \
             "${{ secrets.URL_API_REGISTER_NUGET }}"
