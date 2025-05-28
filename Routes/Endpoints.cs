@@ -48,6 +48,15 @@ namespace modulum.Shared.Routes
         public const string ConsultarRelacionamento = "consultar-relacionamento";
     }
 
+    public static class EndpointsRelacionamento
+    {
+        public const string Raiz = "relacionamento/"; // Raiz do Controller
+
+        public const string ConsultarRelacionamento = "consultar";
+        public const string AlterarRelacionamento = "alterar";
+        public const string DeletarRelacionamento = "deletar";
+    }
+
     public static class EndpointGetVersao
     {
         public const string Raiz = "versao/"; // Raiz do Controller
